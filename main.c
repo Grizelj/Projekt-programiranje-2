@@ -154,16 +154,15 @@ int main() {
 				str[strIndex] = (char)c;
 				strIndex++;
 			}
-
 			strcpy(playerScores[index].name, str);
 			playerScores[index].score = getc(fpointer) - 48;
-
 			index++;
 		}
 	}
 
 	bubbleSortDesc(playerScores, count);
 
+	printf("\nSORTED: \n");
 	printf("Highscores: ");
 	for (int i = 0; i < count; i++) {
 		printf("\n%d. Name: %s            Score: %d\n", i+1, playerScores[i].name, playerScores[i].score);
